@@ -1,0 +1,38 @@
+{
+  "package-id": "Prueba",
+  "list-name": {
+    "ja": "流紋岩中の石英",
+    "en": "Esta es una prueba"
+  },
+  "location": {
+    "en": "Salamanca, Spain"
+  },
+  "geographic-coordinate": {
+    "system": "",
+    "position": {
+      "latitude": null,
+      "longitude": null
+    }
+  },
+  "magnify": "20",
+  "scale-unit": "1mm",
+  "scale-pixel": "305",
+  "image_width": 1280,
+  "image_height": 1280,
+  "rotate_center": [
+    640,
+    640
+  ],
+  "cycle_rotate_degree": 90,
+  "rotate_clockwise": true,
+  "rotate_by_degree": "15",
+  "rock_type": {
+    "ja": "流紋岩",
+    "en": "Rhyolite"
+  },
+  "owner": "Dep. Science, U-Tokyo",
+  "discription": {
+    "ja": "石英斑晶を含む流紋岩. 斑晶石英は一部が融けて丸みを帯びていたり, 虫食い状の凹みがある. 石英斑晶はオープンニコルでは無色で包有物を多数含む様子が見られる. クロスニコルでは, 灰～白の干渉色を示す. また, 石基は気泡を含むガラスで, クロスニコルで常に消光して見える. ",
+    "en": "This is a simple test"
+  }
+}

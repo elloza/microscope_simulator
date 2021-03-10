@@ -36,6 +36,7 @@
     },
     "dependencies": {
         "kind-of": "^6.0.3",
+        "materialize-css": "^1.0.0-rc.2",
         "minimist": "^1.2.5",
         "serialize-javascript": "^3.1.0",
         "set-value": "^3.0.2"

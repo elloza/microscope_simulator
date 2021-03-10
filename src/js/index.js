@@ -6,7 +6,6 @@ import setToggleNicolEvents from "./setToggleNicolEvents.js"
 import setRockSelectEventHandlers from "./setRockSelectEventHandlers.js"
 import setCanvasEventHandlers from "./setCanvasEventHandlers.js"
 import setLanguageSelectEventHandlers from "./setLanguageSelectEventHandlers.js"
-import setContactFormEventHandlers from "./setContactFormEventHandlers.js"
 import initState from "./initState.js"
 import updateViewerGeometry from "./updateViewerGeometry.js"
 import updateView from "./updateView.js"
@@ -101,7 +100,7 @@ function init(state) {
         })
         .then(hideLoadingMessage)
         .catch(e => {
-            console.error(e)
+            console.error(e);
             hideLoadingMessage(e);
         })
 
@@ -110,7 +109,6 @@ function init(state) {
     setRockSelectEventHandlers(state)
     setCanvasEventHandlers(state)
     setLanguageSelectEventHandlers(state)
-    setContactFormEventHandlers(state)
 
 }
 

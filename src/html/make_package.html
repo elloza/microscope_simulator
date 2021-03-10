@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="./images/SCOPin_favicon.png" sizes="64x64">
     <link rel="stylesheet" href="./css/main.css" charset="utf-8">
     <link rel="stylesheet" href="./css/uploader.css" charset="utf-8">
-    <title>Data uploader for SCOPin rock</title>
+    <title>Creador de paquetes de muestras para SCOPin rock</title>
 </head>
 
 <style>
@@ -274,7 +274,7 @@
 
 <body>
     <div class="column-direction space-around">
-        <h1>SCOPin rock package maker</h1>
+        <h1>Creador de paquetes para SCOPin rock</h1>
         <div class="SCOPin_rock_logo">
             <span>SC</span>
             <svg viewBox="0 0 165 165">
@@ -290,60 +290,68 @@
             </div>
 
         </div>
+
         <div id="wrapper">
             <form>
                 <div class="space-between">
                     <div>
                         <div>
+                            <p>Indique el identificador para la muestra, utilice un nombre corto y simple:</p>
+                        </div>
+                        <div>
                             <input id="input_package_id" type="text" placeholder="Package ID" pattern="^[0-9a-zA-Z_-]+$"
                                 required>
                         </div>
-
                         <div>
-                            <input id="input_rotation_interval" type="number" placeholder="Rotation steps (degrees)"
+                            <p>Indique cada cuantos grados se ha tomado las fotografías:</p>
+                        </div>
+                        <div>
+                            <input id="input_rotation_interval" type="number" placeholder="Paso de rotación (en grados)"
                                 required>
+                        </div>
+                        <div>
+                            <p>Las fotos se han realizado siguiendo...</p>
                         </div>
                         <div class="select-wrapper">
                             <select id="select_rotate_direction">
-                                <option value="clockwise">Rotate clockwise</option>
-                                <option value="unti-clockwise">Rotate unti-clockwise</option>
+                                <option value="clockwise">Sentido agujas del reloj</option>
+                                <option value="unti-clockwise">Sentido contrario agujas del reloj</option>
                             </select>
                         </div>
 
                         <div>
-                            <p>Desired image size (KB/image)</p>
+                            <p>Indique el tamaño deseado de la imagen (KB/image)</p>
                         </div>
                         <div class="space-between">
                             <input id="input_desired_image_size" type="number" value="150"
                                 placeholder="Desired image size (KB/image)" required>
                         </div>
                         <div>
-                            <p>Desired thumbnail image size (KB/image)</p>
+                            <p>Indique el tamño deseado del thumnail (KB/image)</p>
                         </div>
                         <div class="space-between">
                             <input id="input_desired_thumbnail_image_size" type="number" value="100"
                                 placeholder="Desired thumbnail image size (KB/image)" required>
                         </div>
                         <div>
-                            <p class="info">Total transfer data size would be <span id="message_package_size"></span>
+                            <p class="info">El total de datos transferidos debería ser <span id="message_package_size"></span>
                                 KB.</p>
                         </div>
                     </div>
 
                     <div>
                         <div id="select_image_wrapper" class="inactive space-around column-direction">
-                            Select image files
+                            Seleccione todas las imagenes en orden (primero nicoles abiertos y posteriormente nicoles cruzados)
                             <div>
                                 <label>
                                     <input id="open_nicol_images" type="file" accept="image/*" multiple>
-                                    <span class="file-parts">Open Nicol</span>
+                                    <span class="file-parts">Nicoles abiertos</span>
                                 </label>
-
                             </div>
                             <div>
                                 <label>
                                     <input id="cross_nicol_images" type="file" accept="image/*" multiple>
-                                    <span class="file-parts">Cross Nicol</span>
+                                    <span class="file-parts">Nicoles cruzados</span>
                                 </label>
                             </div>
                         </div>
@@ -351,16 +359,16 @@
                 </div>
 
                 <div>
-                    <p>Sample Description</p>
+                    <p>Descripción de la muestra</p>
                 </div>
                 <div class="space-between">
                     <div class="language ja">
-                        <input class="input_sample_title" type="text" data-lang="ja" placeholder="サンプルのリスト表示名" required>
-                        <input class="input_sample_location" type="text" data-lang="ja" placeholder="採取地">
-                        <input class="input_owner" type="text" data-lang="ja" placeholder="所有者">
-                        <input class="input_sample_type" type="text" data-lang="ja" placeholder="岩石名・鉱物名">
-                        <textarea name="" class="input input_description" cols="" rows="10" data-lang="ja"
-                            placeholder="サンプルの説明"></textarea>
+                        <input class="input_sample_title" type="text" data-lang="es" placeholder="Título de la muestra (aparecerá en la lista)" required>
+                        <input class="input_sample_location" type="text" data-lang="es" placeholder="Localización de la muestra">
+                        <input class="input_owner" type="text" data-lang="es" placeholder="Propietario de la muestra (Departamento, Universidad)">
+                        <input class="input_sample_type" type="text" data-lang="es" placeholder="Nombre de mineral o minerales">
+                        <textarea name="" class="input input_description" cols="" rows="10" data-lang="en"
+                            placeholder="Descripción de la muestra y otros aspectos relevantes que se puedan encontrar en ella."></textarea>
                     </div>
 
                     <div class="language en">
@@ -376,15 +384,15 @@
                 </div>
 
                 <div>
-                    <p>Scale information</p>
+                    <p>Información de la escala (Opcional)</p>
                 </div>
                 <div class="space-around">
-                    <input id="input_scale_unit" type="text" placeholder="Label of scale (ex. 1mm)">
-                    <input id="input_scale_length" type="number" placeholder="Scale length (px)">
+                    <input id="input_scale_unit" type="text" placeholder="Etiqueta de la escala (ex. 1mm)">
+                    <input id="input_scale_length" type="number" placeholder="Tamaño en píxeles (px)">
                 </div>
 
                 <div>
-                    <p>For your management</p>
+                    <p>Aumentos de la lente (Opcional)</p>
                 </div>
                 <div class="space-around">
                     <input id="input_magnification" type="number" placeholder="Magnification of the view">
@@ -395,11 +403,12 @@
 
         <div id="viewer">
             <div>
-                <p>Adjust rotation center</p>
+                <p>Ajuste del centro de rotación [IMPORTANTE]</p>
+                <p>Situarse en una foto que salga desenfocada y ajustar los siguientes campos:</p>
             </div>
             <div class="space-between">
-                <input type="number" step="1" id="rotate_center_from_left" placeholder="Rotation center from left (px)">
-                <input type="number" step="1" id="rotate_center_from_top" placeholder="Rotation center from top (px)">
+                <input type="number" step="1" id="rotate_center_from_left" placeholder="Centro de rotación desde la izquierda (px)">
+                <input type="number" step="1" id="rotate_center_from_top" placeholder="Centro de rotación desde la parte superior(px)">
             </div>
             <div id='viewer_wrapper' class="inactive align-center column-direction">
                 <div id='viewer-containor' class='align-center'>
@@ -414,25 +423,24 @@
 
             <div id="low-navigation" class="space-around margin-between inactive">
                 <input id="change_nicol" type="checkbox" checked />
-                <label for="change_nicol" data-on-label="Open" data-off-label="Cross"></label>
+                <label for="change_nicol" data-on-label="Abiertos" data-off-label="Cruzados"></label>
             </div>
 
             <div id="view_description" class="align-center column-direction">
             </div>
 
             <div class="button-wrapper">
-                <button id="create_package_button" class="button">Create package</button>
+                <button id="create_package_button" class="button">Crear paquete (Sea paciente)</button>
             </div>
             <div id="error_make_package" class="error_message inactive">
             </div>
             <a id="working_anchor" class="inactive"></a>
 
             <div>
-                <p>If you use static serving,</p>
-                <p>Append list entry below to the "rock_list.json".</p>
+                <p>Añada esta entrada a su fichero "rock_list.json".</p>
             </div>
             <textarea class="input" name="" id="dev_sample_list_entry" cols="" rows="10"
-                placeholder="Sample list entry"></textarea>
+                placeholder="Entrada de la muestra para el fichero JSON"></textarea>
         </div>
     </div>
 

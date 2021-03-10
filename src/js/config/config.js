@@ -15,10 +15,10 @@ console.info("config.js: compileEnv: ", compileEnv)
 
 const packageListEndpoint = compileEnv == "production"
     ? "https://d3uqzv7l1ih05d.cloudfront.net/rock_list.json"
-    : "../../image_package_root/rock_list.json"
+    : "/release/list.json"
 const packageCdnEndpoint = compileEnv == "production"
     ? "https://d3uqzv7l1ih05d.cloudfront.net/packages/"
-    : "../../image_package_root/packages/"
+    : "/release/packages/"
 
 export const staticSettings = new StaticManager(
     packageListEndpoint,

@@ -9,7 +9,7 @@ export default function showSampleList(state, response) {
 
         const sampleList = response["list_of_sample"];
         const sampleSelectDOM = document.querySelector("#rock_selector");
-        sampleSelectDOM.innerHTML = "<option value='' disabled selected style='display:none;'>Select sample</option>";
+        sampleSelectDOM.innerHTML = "<option value='' disabled selected style='display:none;'>Seleccione muestra</option>";
         const options = sampleList.map((v, i) => {
             const option = document.createElement("option")
             option.value = v["package-name"];

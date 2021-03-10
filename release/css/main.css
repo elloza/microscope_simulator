@@ -6,6 +6,11 @@
     color: #be0000;
 }
 
+.bmd-form-group {
+    position: relative;
+    padding-top: 0rem;
+}
+
 @keyframes pulsation {
     0% {
         box-shadow: 0 0 0 0 rgba(75, 133, 240, 0.7), 0 0 0 0 rgba(75, 133, 240, .7)
@@ -197,7 +202,7 @@ select {
     font-size: 1.2rem;
     line-height: 1;
     border: 0.5px solid rgba(49, 49, 93, 0.10);
-    border-bottom: 1px solid #2196f3;
+    border-bottom: 1px solid #ffffff;
     border-radius: 3px;
     color: inherit;
     background-color: inherit;
@@ -206,12 +211,12 @@ select {
 }
 
 select option {
-    background-color: #0c395e;
+    background-color: #d22020;
     color: #eeeeff;
 }
 
 select option.downloaded {
-    background-color: #15609e;
+    background-color: #d22020;
 }
 
 @keyframes slideBelow {
@@ -231,7 +236,7 @@ select option.downloaded {
     width: 100vw;
     height: 64px;
     color: #eeeeff;
-    background-color: #0c395e;
+    background-color: #d22020;
     font-size: 1.25rem;
     opacity: 0;
     box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.5);

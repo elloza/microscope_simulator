@@ -5,15 +5,23 @@
     <meta http-equiv="Content-Type" charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1" user-zoom="no">
     <link rel="manifest" href="./manifest.json">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#0c395e">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#d22020">
     <link rel="apple-touch-icon" href="./images/SCOPin_image_home_logo.png" sizes="144x144">
     <link rel="apple-touch-icon" href="./images/SCOPin_image_home_logo_192.png" sizes="192x192">
     <link rel="apple-touch-icon" href="./images/SCOPin_image_home_logo_512.png" sizes="512x512">
-    <meta name="theme-color" content="#0c395e">
-    <link rel="stylesheet" href="./css/main.css" charset="utf-8">
+    <meta name="theme-color" content="#d22020">
 
-    <link rel="icon" type="image/png" href="./images/SCOPin_favicon.png" sizes="64x64">
-    <title>SCOPin rock: polarizing microscope simulator</title>
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+    <!-- Material Design for Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/main.css" charset="utf-8">
+    
+
+    <link rel="icon" type="image/png" href="./images/favicon.png" sizes="64x64">
+    <title>Microscopio Luz Polarizada</title>
     <!--
     <PageMap>
         <DataObject type="thumbnail">
@@ -27,31 +35,17 @@
     <meta name="thumbnail"
         content="https://s3-ap-northeast-1.amazonaws.com/fumipo-theta-microscope/images/SCOPin_image.png" />
     <meta name="description"
-        content="偏光顕微鏡による岩石薄片観察をシミュレートするアプリです. This application simulates polarizing microscopic view of rock slices." />
-    <meta property="og:title" content="SCOPin rock: polarizing microscope simulator" />
-    <meta property="og:description" content="This application simulates polarizing microscopic view of rock slices." />
+        content="Aplicación que simula un microscopio de luz polarizada" />
+    <meta property="og:title" content="Microscopio Luz Polarizada" />
+    <meta property="og:description" content="Esta aplicación simula un microscopio de luz polarizada." />
     <meta property="og:image"
         content="https://s3-ap-northeast-1.amazonaws.com/fumipo-theta-microscope/images/SCOPin_image.png" />
     <meta property="og:url" content="https://microscope.fumipo-theta.com" />
     <meta property="og:type" content="article" />
-    <!--meta name="twitter:site" content="@xxxxxxxxx" /-->
-    <meta name="twitter:card" content="summary" />
-    <!--meta property="fb:admins" content="xxxxxxxx" /-->
-    <meta name="google-site-verification" content="-1sJ5n_gZ92tSdHs7KCPexogyau4A8MKl6WW3qe4gBk" />
 </head>
 
 <body id="top" ontouchstart="">
     <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            if (location.hostname == 'localhost') return;
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.2';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
 
     <style>
         * {
@@ -101,7 +95,7 @@
             top: 60px;
             width: 100vw;
             height: 2em;
-            background-color: #013159;
+            background-color: #0c395e;
             box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.5);
             animation: loadingSlideBelow 0.5s ease 0s forwards;
         }
@@ -270,7 +264,7 @@
 
         .SCOPin_rock_logo>span {
             font-size: 1em;
-            color: #2196f3;
+            color: #ffffff;
         }
 
 
@@ -368,44 +362,30 @@
         <!-- div class="space-around" -->
         <div id="rock_selector_wrapper" class="select-wrapper margin-between align-center">
             <select id="rock_selector" name="rock_name">
-                <option value='' disabled selected style='display:none;'>Select sample</option>
+                <option value='' disabled selected style='display:none;'>Seleccione una muestra</option>
             </select>
         </div>
 
         <div class="select-wrapper margin-between align-center">
             <select id="language_selector" name="language_name">
-                <option value='ja' selected>日本語</option>
+                <option value='es' selected>Español</option>
                 <option value='en'>English</option>
             </select>
         </div>
+
     </div>
-
-
 
     <div id='app-wrapper' class=" align-center column-direction">
         <div id="welcome-card" class="align-center space-around">
             <div class="align-center column-direction">
+                <h1>Emulador de un microscopio de luz polarizada</h1>
                 <div class="SCOPin_rock_logo">
-                    <span>SC</span>
-                    <svg viewBox="0 0 165 165">
-                        <use xlink:href="#shadow-righttop"></use>
-                        <use xlink:href="#shadow-leftbottom"></use>
-                        <use xlink:href="#back-circle" opacity="1" fill="#000000" fill-opacity="1"></use>
-                        <use class="hexagon" xlink:href="#hexagon" opacity="1" fill="#ffffff" fill-opacity="1">
-                        </use>
-                    </svg>
-                    <span>P</span>
-                    <div>
-                        <div><span>in</span></div>
-                        <div><span>rock</span></div>
-                    </div>
                 </div>
-
-                <p>Polarizing microscope simulator</p>
-
+                <p>Sistema basado en ScopinROCK</p>
+                <img src="https://raw.githubusercontent.com/Fumipo-Theta/microscope_simulator/master/release/images/SCOPin_rock_logo.png" width="600px" height="300px">
                 <div id="please_use_modern_browser" class="inactive">
-                    <p>Sorry, please use web browser below ...</p>
-                    <p>I recomend the latest version of them.</p>
+                    <p>Disculpa utiliza otro navegador para esta aplicación ...</p>
+                    <p>Recomendamos alguno de los siguientes:</p>
                     <ul>
                         <li>Google Chrome (version 45~) </li>
                         <li>Safari (version 10~)</li>
@@ -439,153 +419,34 @@
             </div>
         </div>
 
-
-
         <div id="low-navigation" class="space-around margin-between inactive">
-
             <input id="change_nicol" type="checkbox" checked />
-            <label for="change_nicol" data-on-label="Open" data-off-label="Cross"></label>
-
+            <label for="change_nicol" data-on-label="Abierto" data-off-label="Cruzado"></label>
         </div>
 
         <div id="view_description" class="align-center column-direction">
         </div>
 
-
-        <div id="wrapper-social_buttons" class="space-around" style="margin: 15px 0;">
-            <div class="sns_icon facebook_back"><a href="" target="_blank" title="Facebookでシェア"><img
-                        src="./images/facebook-brands.svg" alt="facebook"></a></div>
-
-
-            <div class="sns_icon  twitter_back"><a href="" target="_blank" title="Twitterでシェア"><img
-                        src="./images/twitter-square-brands.svg" alt="twitter"></a></div>
-
-            <div class="sns_icon line_back"><a href="" target="_blank" title="LINEに送る"><img
-                        src="./images/line-brands.svg" alt="LINE"></a></div>
-
-        </div>
-
-
-
     </div>
 
-
-
     <div id='footer'>
-
         <div class='footer_column'>
+            <h1> Proyecto de innovación docente: Simulador de microscopio de luz polarizada.</h1>
 
-            <div class="SCOPin_rock_logo">
-                <span>SC</span>
-                <svg viewBox="0 0 165 165">
-                    <use xlink:href="#shadow-righttop"></use>
-                    <use xlink:href="#shadow-leftbottom"></use>
-                    <use xlink:href="#back-circle" opacity="1" fill="#000000" fill-opacity="1"></use>
-                    <use xlink:href="#hexagon" opacity="1" fill="#ffffff" fill-opacity="1"></use>
-                </svg>
-                <span>P</span>
-                <div>
-                    <div><span>in</span></div>
-                    <div><span>rock</span></div>
-                </div>
-            </div>
-            <p>@VERSION@</p>
-            <h1>Polarization microscope simulator, SCOPin rock !</h1>
-            <p><a href="./make_package.html">Create microscope images package</a></p>
+            <p>Esta aplicación web es un fork del proyecto SCOPin rock realizado por Fumipo Theta.</p>
+            <p>Se ha realizado una adaptación para poder utilizar esta herramienta como apoyo para virtualizar las clases en las que se emplea
+            un microscopio de polarización. El enlace al repositorio original <a
+            href="https://github.com/Fumipo-Theta/microscope_simulator/">GitHub</a></li> y al fork realizado en este proyecto se encuentra disponible en el siguiente enlace:
+            </p>
 
-            <ul>
-                <li>This page and all contents are made by Fumipo Theta.
-                    Please do not copy, modify, and repost any contents without telling me.</li>
-                <li><a href="./about.html">Privacy policy</a></li>
-                <li>Source code is available at <a
-                        href="https://github.com/Fumipo-Theta/microscope_simulator/">GitHub</a></li>
-            </ul>
+            <iframe src="https://ghbtns.com/github-btn.html?user=Fumipo-Theta&repo=microscope_simulator&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+            <img src="https://raw.githubusercontent.com/Fumipo-Theta/microscope_simulator/master/release/images/SCOPin_rock_logo.png" >
 
-
+            <a href="https://github.com/Fumipo-Theta/microscope_simulator"><img src="https://gh-card.dev/repos/Fumipo-Theta/microscope_simulator.svg"></a>
+            <p>Es posible crear nuevas muestras para esta herramienta en el siguiente enlace:</p>
+            <p><a href="./make_package.html">Crear un paquete para ScopinRock a partir de fotos de microscopio</a></p>
 
         </div>
-
-        <div class='footer_column'>
-
-            <a class="twitter-timeline" data-height="600" href="https://twitter.com/FumipoT?ref_src=twsrc%5Etfw">Tweets
-                by
-                FumipoT</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-        </div>
-
-        <div class='footer_column '>
-
-            <div class="form-wrapper space-around column-direction">
-                <p><span class="important">Please give your feedback !</span></span></p>
-                <form id="form-contact" class="spread">
-                    <div class="spread space-around">
-
-                        <select id="select-contact_topic">
-                            <option value='' disabled selected style='display:none;'>Select topic</option>
-                            <option value="error">Error & Bags</option>
-                            <option value="question">Question</option>
-                            <option value="request">Request</option>
-                            <option value="others">Others</option>
-                        </select>
-                    </div>
-                    <div class="spread space-around column-direction">
-                        <textarea id="contact-body" class="spread" rows="8" placeholder="Enter message..."></textarea>
-                    </div>
-
-                    <div class="spread space-around">
-                        <div>Email (optinal)</div>
-                        <input type="email" placeholder="your.email@example.com">
-                    </div>
-
-                    <p class="form-message inactive">Form message</p>
-                    <div class="button rect-button space-around">Submit</div>
-                </form>
-            </div>
-
-            <div class="form-wrapper space-around column-direction">
-                <div class="card-icon">
-                    <img class="icon" src="./images/ProfilePhoto.jpg" alt="Fumipo-Theta's icon">
-                </div>
-                <div class="spread">
-                    <span class="important">Please donate</span> for maintenence and updating service ! <br>
-                    We will not hold any personal information.
-                </div>
-
-
-                <form id="payment-form" class="spread inactive">
-                    <div class="space-around column-direction">
-
-                        <div class="spread">
-                            <select id="select-amount">
-                                <option value='placeholder' disabled selected style='display:none;'>Select amount
-                                </option>
-                                <option value="small">100 JPY (1 USD)</option>
-                                <option value="middle">1,000 JPY (10 USD)</option>
-                                <option value="large">10,000 JPY (100 USD)</option>
-                            </select>
-                        </div>
-
-                        <div class="spread">
-                            <div id="card-element"></div>
-                            <div id="card-errors" class="alert alert-warning" role="alert" style="display: none;">
-                            </div>
-                            <div id="card-success" class=" info-text inactive">
-                                Payment was successful !
-                                Thank you very much !
-                            </div>
-                        </div>
-
-                        <div class="spread">
-                            <button class="button rect-button">Donate <span id="show-amount"> </span></button>
-                        </div>
-
-                    </div>
-                </form>
-            </div>
-        </div>
-
     </div>
     <div class="image_containor"></div>
 
@@ -596,8 +457,8 @@
                     <img src="./images/SCOPin_image_home_logo.png" width="50px" height="50px">
                 </div>
                 <div>
-                    New version is found. <br>
-                    <u>Click</u> to complete update !
+                    Nueva versión. <br>
+                    <u>Haga click</u> para completar la actualización !
                 </div>
             </a>
         </div>
@@ -673,7 +534,7 @@
     <script src="./js/jsinflate.js"></script>
     <!--script src="./js/app.js"></script-->
 
-</body>
+<script type="text/javascript" src="js/app.js"></script></body>
 
 
 <!-- API Gateway SDK -->
@@ -688,12 +549,12 @@
 <script type="text/javascript" defer src="js/lib/apiGatewayCore/simpleHttpClient.js"></script>
 <script type="text/javascript" defer src="js/lib/apiGatewayCore/utils.js"></script>
 <script type="text/javascript" defer src="js/apigClient.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 
-<!-- stripe.js -->
-<script defer src="https://js.stripe.com/v3/"></script>
-<script defer src="./js/payment.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-134075472-1"></script>
-<script defer src="./js/app_social_connection.js"></script>
 
 </html>

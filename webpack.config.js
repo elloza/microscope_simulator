@@ -5,7 +5,6 @@ const VERSION = process.env.npm_package_version;
 const compileEnv = process.env.NODE_ENV == "production" ? "production" : "development"
 
 console.log("Compile env: ", compileEnv)
-console.log("Access to local server from: http://lvh.me:8080/release")
 
 const outputPath = `${__dirname}/release`
 
@@ -32,8 +31,9 @@ module.exports = [
             })
         ],
         devServer: {
-            contentBase: __dirname,
-            disableHostCheck: true
+            contentBase: `${__dirname}`,
+            disableHostCheck: true,
+            hot: true
         }
     },
     {
@@ -79,8 +79,9 @@ module.exports = [
             })
         ],
         devServer: {
-            contentBase: __dirname,
-            disableHostCheck: true
+            contentBase: `${__dirname}/release`,
+            disableHostCheck: true,
+            hot: true
         }
     }
 ]

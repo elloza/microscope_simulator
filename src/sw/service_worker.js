@@ -30,7 +30,7 @@ const STATIC_FILES = [
     ORIGIN + "/js/apigClient.js",
     ORIGIN + "/js/payment.js",
     //"https://js.stripe.com/v3/",
-    ORIGIN + "/js/app_social_connection.js",
+    //ORIGIN + "/js/app_social_connection.js",
 
 ];
 
